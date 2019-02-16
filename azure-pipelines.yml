@@ -11,12 +11,10 @@ pool:
   vmImage: 'Ubuntu-16.04'
 
 steps:
-
 - script: |
     mkdir -p images
-    npm i mermaid.cli
-    ls -al
-    ./build-diagrams.sh && \
+    npm i -g mermaid.cli
+    ./build-diagrams.sh
     git checkout master && \
     git add . && \
     git commit -m "Updating images" && \
