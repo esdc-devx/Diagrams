@@ -16,6 +16,7 @@ steps:
     mkdir -p images
     npm i mermaid.cli && \
     ./builddiagrams.sh && \
+    git checkout master && \
     git add . && \
     git commit -m "Updating images" && \
     git push https://%gt%@github.com/esdc-devx/Diagrams.git
