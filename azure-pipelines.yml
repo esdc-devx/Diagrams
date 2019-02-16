@@ -14,7 +14,8 @@ steps:
 
 - script: |
     mkdir -p images
-    npm i mermaid.cli && \
+    npm i mermaid.cli
+    ls -al
     ./build-diagrams.sh && \
     git checkout master && \
     git add . && \
