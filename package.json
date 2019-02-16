@@ -1,0 +1,23 @@
+{
+  "name": "diagrams",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "mermaid.cli": "^0.5.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/esdc-devx/Diagrams.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/esdc-devx/Diagrams/issues"
+  },
+  "homepage": "https://github.com/esdc-devx/Diagrams#readme"
+}
