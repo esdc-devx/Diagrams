@@ -13,9 +13,11 @@ pool:
 steps:
 - script: |
     mkdir -p images
-    npm i -g mermaid.cli
-    ./build-diagrams.sh
+    sudo npm i -g mermaid.cli && \
+    ./build-diagrams.sh && \
     git checkout master && \
+    git config --global user.email "calvin.rodo@hrsdc-rhdcc.gc.ca" && \
+    git config --global user.name "Calvin Automated Build" && \
     git add . && \
     git commit -m "Updating images" && \
     git push https://%gt%@github.com/esdc-devx/Diagrams.git
