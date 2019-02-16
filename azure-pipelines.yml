@@ -12,11 +12,14 @@ pool:
 
 steps:
 - script: |
-    sudo npm install -g mermaid.cli
+    sudo npm install -g puppeteer mermaid.cli
   displayName: Installing mermaid cli
 - script: |
     mkdir -p images
-    ./build-diagrams.sh && \
+    npx mmdc \
+    -i CC-diagram.mmd \
+    -o ./images/infradiag.png \
+    --backgroundColor '#ffffff' && \
     git checkout master && \
     git config --global user.email "calvin.rodo@hrsdc-rhdcc.gc.ca" && \
     git config --global user.name "Calvin Automated Build" && \
